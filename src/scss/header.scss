@@ -38,12 +38,26 @@
 		display: flex;
 		position: relative;
 		align-items: center;
+		transition: color .25s ease-in;
 		color: #565655;
 		font-weight: 700;
+
+		&:hover {
+			color: $green;
+		}
 	}
 
 	&__lang {
+		transition: color .25s ease-in;
 		color: #565656;
+
+		a {
+			transition: color .25s ease-in;
+
+			&:hover {
+				color: $green;
+			}
+		}
 
 		a:first-of-type {
 			padding-right: 9px;
@@ -186,9 +200,15 @@
 	}
 
 	&__btn {
+		display: block;
+		animation: arrow-bounce 5s infinite;
 		border: 0;
 		outline: none;
 		background: transparent;
+
+		&:hover {
+			animation-play-state: paused;
+		}
 	}
 
 	.messengers {
@@ -223,6 +243,28 @@
 		position: relative;
 		width: 100%;
 		max-width: 60%;
+		height: 100%;
+
+		.slider-track {
+			transition: all 1s cubic-bezier(.7, 0, .3, 1);
+		}
+
+		.slide {
+			position: relative;
+			z-index: 1;
+			height: 100%;
+
+			img {
+				width: 100%;
+				transform: scale(1.2);
+				transition: all 3s cubic-bezier(.7, 0, .3, 1);
+			}
+
+			&.slick-active img {
+				transform: scale(1);
+			}
+		}
+
 		// max-height: 640px;
 
 		// &__content {
@@ -368,3 +410,18 @@
 
 }
 
+
+@keyframes arrow-bounce {
+
+	0% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(20px);
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}

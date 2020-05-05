@@ -1,0 +1,147 @@
+@import "../helpers/_vars";
+
+@import "../helpers/_mixins";
+
+@include respond-to(phone) {
+}
+
+@include respond-to(phone-xl) {
+}
+
+@include respond-to(note) {
+}
+
+@include respond-to(tablet) {
+}
+
+@include respond-to(laptop) {
+}
+
+@include respond-to(desktop) {
+}
+
+@include respond-to(desktop-xl) {
+}
+
+.footer {
+	padding: 28px 0;
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 430px;
+		font-size: rem(20);
+		font-weight: 700;
+		text-transform: uppercase;
+
+		img {
+			display: block;
+			margin-top: -8px;
+			margin-right: 22px;
+		}
+
+		h2 {
+			color: $grey;
+		}
+
+		span {
+			display: block;
+			color: $grey-dark;
+		}
+	}
+
+	&__contact {
+		max-width: 176px;
+
+		h2 {
+			color: $grey;
+			font-weight: 700;
+		}
+
+		address {
+			margin-bottom: 20px;
+			color: $grey-dark;
+		}
+	}
+
+
+	&__top,
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__top {
+		padding-bottom: 23px;
+
+		h3 {
+			padding-bottom: 5px;
+			color: $grey-dark;
+			font-size: rem(24);
+			font-weight: 700;
+		}
+
+		.footer__phone {
+			display: flex;
+			align-items: center;
+			margin-right: 25px;
+			transition: color .25s ease-in;
+			color: $grey-dark;
+			font-weight: 700;
+
+			span {
+				font-size: rem(24);
+			}
+
+			&:hover {
+				color: $green;
+			}
+		}
+
+		.smm__link {
+			width: 56px;
+			height: 52px;
+		}
+
+		.smm__item {
+			padding: 10px 13px;
+			border-right: 2px solid #9aa6ad;
+			border-left: 2px solid #9aa6ad;
+
+			&:nth-of-type(2) {
+				border: 0;
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+	}
+
+	.copy {
+		font-size: 16px;
+	}
+
+	.agency {
+
+		span {
+			display: inline-block;
+			padding-bottom: 5px;
+			font-size: 14px;
+			text-align: center;
+		}
+
+		img {
+			display: block;
+			margin: auto;
+		}
+	}
+}

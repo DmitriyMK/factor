@@ -1,0 +1,148 @@
+@import "../helpers/_vars";
+
+@import "../helpers/_mixins";
+
+@include respond-to(phone) {
+}
+
+@include respond-to(phone-xl) {
+}
+
+@include respond-to(note) {
+}
+
+@include respond-to(tablet) {
+}
+
+@include respond-to(laptop) {
+}
+
+@include respond-to(desktop) {
+}
+
+@include respond-to(desktop-xl) {
+}
+
+
+.shop {
+	position: relative;
+	overflow: hidden;
+	background: #fafafa;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		// z-index: -1;
+		top: 0;
+		right: 105px;
+		width: 330px;
+		height: 100%;
+		background: repeating-linear-gradient(90deg, #fafafa, #fafafa 100px, #9ca7ae 102px, #fafafa 100px, #9ca7ae 102px, #fafafa 100px, #9ca7ae 102px);
+	}
+
+	&__line {
+		position: relative;
+		z-index: 2;
+		width: 100vw;
+		height: 50px;
+		background: $grey-dark;
+	}
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		margin-left: 52.5%;
+		color: $grey-dark !important;
+
+		@include section-title;
+	}
+
+	&__backTitle {
+		position: absolute;
+		top: 0;
+		right: -80px;
+
+		@include section-title-behind;
+	}
+
+	&__box {
+
+	}
+
+	&__list {
+		position: relative;
+		z-index: 3;
+		max-width: 600px;
+		margin-left: 49.2%;
+		padding: 30px 0 30px 50px;
+		background: #f8f8f8;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -50px;
+			left: 0;
+			width: 2px;
+			height: calc(100% + 50px);
+			background: $grey;
+		}
+	}
+
+	&__item {
+		display: flex;
+		position: relative;
+		margin-bottom: 30px;
+		color: $grey-dark;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 10px;
+			height: 10px;
+			margin-top: 6px;
+			margin-right: 15px;
+			border-radius: 50%;
+			background: $grey;
+			box-shadow: 0 0 0 2px #fff ,
+				0 0 0 4px $grey;
+		}
+
+		p {
+			padding-bottom: 6px;
+		}
+
+		a {
+			transition: color .25s ease-out;
+
+			&:hover {
+				color: #000;
+			}
+		}
+
+		div a:first-of-type {
+			position: relative;
+			padding-left: 30px;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 25px;
+				height: 31px;
+				background: url(../../img/phone.png)no-repeat center/contain;
+			}
+		}
+	}
+
+	.map {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 60vw;
+		height: 800px;
+	}
+
+}

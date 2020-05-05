@@ -11,11 +11,13 @@
 
 @import "./sections/advantages";
 
-//  MAIN STYLE
+@import "./sections/client";
 
-// object-fit: cover;
-// object-position: 50% 20%;
-// font-family: 'object-fit: cover; object-position: 50% 20%;';
+@import "./sections/shop";
+
+@import "./sections/footer";
+
+//  MAIN STYLE
 
 @media (max-width: $desktop-xl) {
 }

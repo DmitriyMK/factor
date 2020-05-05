@@ -1,0 +1,125 @@
+@import "../helpers/_vars";
+
+@import "../helpers/_mixins";
+
+@include respond-to(phone) {
+}
+
+@include respond-to(phone-xl) {
+}
+
+@include respond-to(note) {
+}
+
+@include respond-to(tablet) {
+}
+
+@include respond-to(laptop) {
+}
+
+@include respond-to(desktop) {
+}
+
+@include respond-to(desktop-xl) {
+}
+
+
+.about {
+	position: relative;
+	margin-bottom: 110px;
+	background: #fff;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 135px;
+		width: 330px;
+		height: 100%;
+		background: repeating-linear-gradient(90deg, #fff, #fff 100px, #9ca7ae 102px, #fff 100px, #9ca7ae 102px, #fff 100px, #9ca7ae 102px);
+	}
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		margin-left: calc(52% - 6px);
+
+		@include section-title;
+
+		&-wrap {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&__backTitle {
+		position: absolute;
+		top: 0;
+		left: 30%;
+
+		@include section-title-behind;
+	}
+
+	&__box {
+		display: flex;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		padding: 72px 0;
+	}
+
+	&__photo {
+		width: 100%;
+		max-width: 52%;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 576px;
+	}
+
+	&__story {
+		display: flex;
+		margin-bottom: 10px;
+		color: $grey-dark;
+		font-size: rem(18);
+		line-height: 1.25;
+
+		div {
+			width: 100%;
+			padding-right: 38px;
+		}
+
+		p {
+			padding-bottom: 20px;
+		}
+	}
+
+	&__fact {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+		margin-right: 50px;
+
+		li {
+			display: flex;
+			align-items: center;
+			margin-bottom: -10px;
+			color: $grey-dark;
+			font-size: rem(28);
+		}
+
+		span {
+			padding-right: 25px;
+			color: $grey;
+			font-size: rem(77);
+			font-weight: 900;
+			line-height: 1;
+		}
+	}
+
+
+}

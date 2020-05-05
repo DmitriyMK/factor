@@ -1,0 +1,83 @@
+@import "../helpers/_vars";
+
+@import "../helpers/_mixins";
+
+@include respond-to(phone) {
+}
+
+@include respond-to(phone-xl) {
+}
+
+@include respond-to(note) {
+}
+
+@include respond-to(tablet) {
+}
+
+@include respond-to(laptop) {
+}
+
+@include respond-to(desktop) {
+}
+
+@include respond-to(desktop-xl) {
+}
+
+
+.services {
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		margin-left: -5px;
+
+		@include section-title;
+
+		&-wrap {
+			position: relative;
+			z-index: 1;
+			width: 100%;
+		}
+	}
+
+	&__backTitle {
+		position: absolute;
+		top: 0;
+		left: -155px;
+		width: 100vw;
+
+		@include section-title-behind;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -9px;
+		padding: 70px 0;
+	}
+
+	&__list {
+		border-left: 1px solid $grey;
+
+		li {
+			max-width: 290px;
+			margin-bottom: 41px;
+			padding-left: 14px;
+			transition: .25s color ease-out;
+			color: $grey;
+			font-size: rem(24);
+			font-weight: 700;
+			letter-spacing: -1.65px;
+			line-height: 1.4;
+			text-transform: uppercase;
+
+			&:hover {
+				color: #000;
+				cursor: default;
+			}
+		}
+	}
+}

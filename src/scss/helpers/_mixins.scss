@@ -43,3 +43,22 @@
 		ttf: "truetype"
 	);
 }
+
+
+@mixin section-title {
+	color: $grey-dark;
+	font-size: rem(100);
+	font-weight: 900;
+	line-height: .7;
+	text-transform: uppercase;
+}
+
+
+@mixin section-title-behind {
+	color: #fff;
+	font-size: rem(200);
+	font-weight: 900;
+	line-height: 0;
+	pointer-events: none;
+	user-select: none;
+}

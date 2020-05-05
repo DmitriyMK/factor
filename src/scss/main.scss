@@ -5,6 +5,9 @@
 @import "./helpers/_hacks";
 
 
+@import "./sections/about";
+
+@import "./sections/services";
 
 //  MAIN STYLE
 
@@ -32,3 +35,6 @@
 
 @media (max-width: $phone) {
 }
+
+
+// @include section-title;

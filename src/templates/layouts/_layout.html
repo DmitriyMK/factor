@@ -45,8 +45,14 @@
     <!-- BEGIN scripts -->
     <script src="./js/lib/jquery-2.2.4.min.js"></script>
     <script src="./js/lib/slick.js"></script>
+
+
+    <script src="./js/app.js"></script>
     <script src="./js/lib/luxy.js"></script>
-    <script>
+    <script src="./js/lib/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE">
+    </script>
+     <script>
       var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (!isMobile) {
         luxy.init({
@@ -55,11 +61,5 @@
         });
       }
     </script>
-
-    <script src="./js/app.js"></script>
-    <script src="./js/lib/map.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE">
-    </script>
-    <script src="./js/lib/ofi.min.js"></script>
   </body>
 </html>

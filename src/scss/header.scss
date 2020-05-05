@@ -156,7 +156,7 @@
 	&__content {
 		position: relative;
 		z-index: 1;
-		max-width: 23%;
+		max-width: 20.5%;
 		padding-top: 74px;
 		padding-bottom: 60px;
 	}
@@ -242,13 +242,12 @@
 
 		&__content {
 			position: absolute;
-			bottom: 0;
+			bottom: 56px;
 			left: 170px;
 			width: 100%;
 			max-width: 640px;
 			height: 100%;
 			max-height: 262px;
-			margin-bottom: 23px;
 			background: #69dc44;
 			font-weight: 700;
 			text-transform: uppercase;
@@ -362,6 +361,8 @@
 		position: absolute;
 		top: 0;
 		left: 100%;
+		pointer-events: none;
+		user-select: none;
 	}
 
 }

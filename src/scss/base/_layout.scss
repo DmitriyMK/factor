@@ -14,13 +14,10 @@ html {
 
 .wrapper {
 	position: relative;
+	width: 100%;
 	max-width: 1920px;
 	margin: 0 auto;
-	padding: 0 20px;
 
-	@media (max-width: $desktop-xl) {
-		max-width: 1320px;
-	}
 
 	@media (max-width: $desktop) {
 		max-width: 1200px;

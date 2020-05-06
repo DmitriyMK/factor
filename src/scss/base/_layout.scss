@@ -20,27 +20,31 @@ html {
 
 
 	@media (max-width: $laptop) {
-		max-width: 1024px;
+		max-width: 100%;
 	}
 
 	@media (max-width: $tablet) {
 		width: 980px;
-		padding: 0 40px;
+		max-width: 100%;
+		padding: 0 20px;
 	}
 
 	@media (max-width: $note) {
 		width: 725px;
-		padding: 0 30px;
 	}
 
 	@media (max-width: $phone-xl) {
 		width: 100%;
-		padding: 0 15px;
+		padding: 0 10px;
 	}
 }
 
 .box {
 	max-width: 1200px;
+
+	@media (max-width: $laptop) {
+		max-width: 100%;
+	}
 }
 
 .main {

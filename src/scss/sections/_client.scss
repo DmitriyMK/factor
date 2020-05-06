@@ -29,6 +29,10 @@
 	overflow: hidden;
 	background: #fff;
 
+	@media (max-width: $note) {
+		margin-bottom: 150px;
+	}
+
 	&__title {
 		position: relative;
 		z-index: 1;

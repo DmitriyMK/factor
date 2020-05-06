@@ -2,34 +2,18 @@
 
 @import "../helpers/_mixins";
 
-@include respond-to(phone) {
-}
-
-@include respond-to(phone-xl) {
-}
-
-@include respond-to(note) {
-}
-
-@include respond-to(tablet) {
-}
-
-@include respond-to(laptop) {
-}
-
-@include respond-to(desktop) {
-}
-
-@include respond-to(desktop-xl) {
-}
 
 .footer {
-	padding: 28px 0;
+	padding: 28px 20px;
 
 	&__box {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+
+		@media (max-width: $tablet) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__logo {
@@ -40,6 +24,11 @@
 		font-size: rem(20);
 		font-weight: 700;
 		text-transform: uppercase;
+
+		@media (max-width: $tablet) {
+			margin-bottom: 20px;
+			font-size: rem(18);
+		}
 
 		img {
 			display: block;
@@ -60,6 +49,10 @@
 	&__contact {
 		max-width: 176px;
 
+		@media (max-width: $tablet) {
+			margin-bottom: 20px;
+		}
+
 		h2 {
 			color: $grey;
 			font-weight: 700;
@@ -71,11 +64,20 @@
 		}
 	}
 
+	&__right {
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+	}
 
 	&__top,
 	&__bottom {
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width: $note) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__top {
@@ -105,6 +107,20 @@
 			}
 		}
 
+		.smm {
+			@media (max-width: $note) {
+				display: flex;
+				width: 100%;
+				margin: 20px 0;
+			}
+		}
+
+		.smm__list {
+			@media (max-width: $phone-xl) {
+				justify-content: flex-start;
+			}
+		}
+
 		.smm__link {
 			width: 56px;
 			height: 52px;
@@ -114,6 +130,12 @@
 			padding: 10px 13px;
 			border-right: 2px solid #9aa6ad;
 			border-left: 2px solid #9aa6ad;
+
+			@media (max-width: $phone-xl) {
+				margin: 0 10px 0 0;
+				padding: 0;
+				border: 0;
+			}
 
 			&:nth-of-type(2) {
 				border: 0;
@@ -128,6 +150,10 @@
 
 	.copy {
 		font-size: 16px;
+
+		@media (max-width: $phone-xl) {
+			padding-bottom: 20px;
+		}
 	}
 
 	.agency {

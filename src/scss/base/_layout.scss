@@ -19,11 +19,6 @@ html {
 	margin: 0 auto;
 
 
-	@media (max-width: $desktop) {
-		max-width: 1200px;
-		padding: 0 40px;
-	}
-
 	@media (max-width: $laptop) {
 		max-width: 1024px;
 	}

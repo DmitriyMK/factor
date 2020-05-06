@@ -73,11 +73,13 @@
 	&__photo {
 		width: 100%;
 		max-width: 52%;
+		margin-right: 30px;
 	}
 
 	&__content {
 		width: 100%;
 		max-width: 576px;
+		background: #fff;
 	}
 
 	&__story {

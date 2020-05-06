@@ -10,11 +10,11 @@ $(document).ready(function() {
     slidesToScroll: 1,
     fade: true,
     infinite: true,
-    speed: 900,
+    autoplaySpeed: 4000,
     autoplay: true,
     infinite: true,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-    touchThreshold: 100
+    // touchThreshold: 100
   });
 
   $('.client__slider').slick({

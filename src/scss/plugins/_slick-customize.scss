@@ -58,8 +58,21 @@
 	padding-bottom: 18px;
 	transform: none;
 
+	@media (max-width: $note) {
+		right: 10px;
+		bottom: 10px;
+		left: inherit;
+		padding-bottom: 8px;
+	}
+
 	li {
 		margin-bottom: 6px;
+
+		@media (max-width: $note) {
+			width: 15px;
+			height: 15px;
+			margin: 0;
+		}
 
 		button {
 			display: block;
@@ -68,15 +81,11 @@
 			border: 1px solid $grey;
 			border-radius: 50%;
 			background: #fff;
-			// display: block;
-			// width: 13px;
-			// height: 13px;
-			// border-radius: 50%;
-			// opacity: .75;
-			// background: #fff;
-			// box-shadow: 0px 5px 7px 1px rgba(0, 45, 86, .15);
-			// color: #fff;
-			// font-size: 0px;
+
+			@media (max-width: $note) {
+				width: 15px;
+				height: 15px;
+			}
 
 			&:before {
 				display: none;

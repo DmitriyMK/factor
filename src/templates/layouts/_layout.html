@@ -52,16 +52,24 @@
     <script src="./js/lib/map.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE">
     </script>
-     <script>
+    <script>
+      var isIE = false;
+      var ua = window.navigator.userAgent;
+      var old_ie = ua.indexOf('MSIE ');
+      var new_ie = ua.indexOf('Trident/');
+
+      if ((old_ie > -1) || (new_ie > -1)) {
+        isIE = true;
+      }
+
       var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if (!isMobile) {
+      if ((!isMobile) || (!isIE)){
         luxy.init({
           wrapper: '#luxy',
-          wrapperSpeed: 0.05
+          wrapperSpeed: 0.1
         });
       }
     </script>
-    <script src="../../js/lib/ofi.min.js"></script>
-    <script src="../../js/lib/svgxuse.min.js"></script>
+    <script src="./js/lib/ofi.min.js"></script>
   </body>
 </html>

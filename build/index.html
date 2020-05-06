@@ -63,23 +63,17 @@
                 <ul class="smm__list">
                   <li class="smm__item">
                     <a class="smm__link" href="#" target="_blank" rel="noopener noreferrer">
-                      <svg>
-                        <use xlink:href="../img/sprite.svg#instagram"></use>
-                      </svg>
+                      <img src="./img/instagram.svg" alt>
                     </a>
                   </li>
                   <li class="smm__item">
                     <a class="smm__link" href="#" target="_blank" rel="noopener noreferrer">
-                      <svg>
-                        <use xlink:href="../img/sprite.svg#facebook"></use>
-                      </svg>
+                      <img src="./img/facebook.svg" alt>
                     </a>
                   </li>
                   <li class="smm__item">
                     <a class="smm__link" href="#" target="_blank" rel="noopener noreferrer">
-                      <svg>
-                        <use xlink:href="../img/sprite.svg#youtube"></use>
-                      </svg>
+                      <img src="./img/youtube.svg" alt>
                     </a>
                   </li>
                 </ul>
@@ -95,23 +89,17 @@
                   <ul class="messengers__list">
                     <li class="messengers__item">
                       <a class="messengers__link" href="viber://add?number=">
-                        <svg>
-                          <use xlink:href="../img/sprite.svg#viber"></use>
-                        </svg>
+                        <img src="./img/viber.svg" alt>
                       </a>
                     </li>
                     <li class="messengers__item">
                       <a class="messengers__link" href="https://wa.me/">
-                        <svg>
-                          <use xlink:href="../img/sprite.svg#whatapp"></use>
-                        </svg>
+                        <img src="./img/whatapp.svg" alt>
                       </a>
                     </li>
                     <li class="messengers__item">
                       <a class="messengers__link" href="https://telegram.me/">
-                        <svg>
-                          <use xlink:href="../img/sprite.svg#telegram"></use>
-                        </svg>
+                        <img src="./img/telegram.svg" alt>
                       </a>
                     </li>
                   </ul>
@@ -619,18 +607,25 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE">
     </script>
     <script>
+      var isIE = false;
+      var ua = window.navigator.userAgent;
+      var old_ie = ua.indexOf('MSIE ');
+      var new_ie = ua.indexOf('Trident/');
+      if ((old_ie > -1) || (new_ie > -1))
+      {
+        isIE = true;
+      }
       var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if (!isMobile)
+      if ((!isMobile) || (!isIE))
       {
         luxy.init(
         {
           wrapper: '#luxy',
-          wrapperSpeed: 0.05
+          wrapperSpeed: 0.1
         });
       }
 
     </script>
-    <script src="../../js/lib/ofi.min.js"></script>
-    <script src="../../js/lib/svgxuse.min.js"></script>
+    <script src="./js/lib/ofi.min.js"></script>
   </body>
 </html>

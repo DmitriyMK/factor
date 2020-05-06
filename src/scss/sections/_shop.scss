@@ -77,6 +77,11 @@
 			padding-left: 30px;
 		}
 
+		@media (max-width: $phone-xl) {
+			padding-left: 15px;
+		}
+
+
 		&:before {
 			content: "";
 			position: absolute;
@@ -98,6 +103,10 @@
 		margin-bottom: 30px;
 		color: $grey-dark;
 
+		@media (max-width: $phone-xl) {
+			display: inline-block;
+		}
+
 		&:before {
 			content: "";
 			display: block;
@@ -109,6 +118,10 @@
 			background: $grey;
 			box-shadow: 0 0 0 2px #fff ,
 				0 0 0 4px $grey;
+
+			@media (max-width: $phone-xl) {
+				margin-bottom: 15px;
+			}
 		}
 
 		p {
@@ -136,6 +149,18 @@
 				width: 25px;
 				height: 31px;
 				background: url(../../img/phone.png)no-repeat center/contain;
+
+				@media (max-width: $phone-xl) {
+					top: 8px;
+				}
+			}
+		}
+
+		div a:last-of-type {
+			@media (max-width: $phone-xl) {
+				display: block;
+				margin-top: 5px;
+				margin-left: 30px;
 			}
 		}
 	}

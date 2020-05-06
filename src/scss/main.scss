@@ -1,10 +1,6 @@
 /* HELPERS */
 @import "./helpers/_vars";
 
-// HACKS
-@import "./helpers/_hacks";
-
-
 @import "./sections/about";
 
 @import "./sections/services";
@@ -16,29 +12,3 @@
 @import "./sections/shop";
 
 @import "./sections/footer";
-
-//  MAIN STYLE
-
-@media (max-width: $desktop-xl) {
-}
-
-@media (max-width: $desktop) {
-}
-
-@media (max-width: $laptop) {
-}
-
-@media (max-width: $tablet) {
-}
-
-@media (max-width: $note) {
-}
-
-@media (max-width: $phone-xl) {
-}
-
-@media (max-width: $phone) {
-}
-
-
-// @include section-title;

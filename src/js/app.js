@@ -1,5 +1,3 @@
-// import sayHello from './lib/sayHello.js';
-
 $(document).ready(function() {
 
   $('.hero__slider').slick({

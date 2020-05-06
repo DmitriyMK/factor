@@ -4,7 +4,7 @@ var config = require('../config.js');
 gulp.task('copy:img', function () {
   return gulp
     .src([
-      config.src.img + '/**/*.{jpg,png,jpeg,svg,gif}',
+      config.src.img + '/**/*.{jpg,webp,png,jpeg,svg,gif}',
       '!' + config.src.img + '/svgo/**/*.*'
     ])
     .pipe(gulp.dest(config.dest.img));

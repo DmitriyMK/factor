@@ -2,28 +2,6 @@
 
 @import "../helpers/_mixins";
 
-@include respond-to(phone) {
-}
-
-@include respond-to(phone-xl) {
-}
-
-@include respond-to(note) {
-}
-
-@include respond-to(tablet) {
-}
-
-@include respond-to(laptop) {
-}
-
-@include respond-to(desktop) {
-}
-
-@include respond-to(desktop-xl) {
-}
-
-
 .about {
 	position: relative;
 	margin-bottom: 110px;
@@ -39,6 +17,15 @@
 		width: 330px;
 		height: 100%;
 		background: repeating-linear-gradient(90deg, #fff, #fff 100px, #9ca7ae 102px, #fff 100px, #9ca7ae 102px, #fff 100px, #9ca7ae 102px);
+
+		@media (max-width: $laptop) {
+			right: inherit;
+			left: 0;
+		}
+
+		@media (max-width: $note) {
+			display: none;
+		}
 	}
 
 	&__title {
@@ -47,6 +34,12 @@
 		margin-left: calc(52% - 6px);
 
 		@include section-title;
+
+
+		@media (max-width: $tablet) {
+			margin-left: inherit;
+			text-align: right;
+		}
 
 		&-wrap {
 			position: relative;
@@ -58,6 +51,7 @@
 		position: absolute;
 		top: 0;
 		left: 30%;
+		width: 100%;
 
 		@include section-title-behind;
 	}
@@ -68,18 +62,42 @@
 		z-index: 1;
 		width: 100%;
 		padding: 72px 0;
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			padding: 60px 0;
+		}
 	}
 
 	&__photo {
 		width: 100%;
 		max-width: 52%;
 		margin-right: 30px;
+
+		@media (max-width: $laptop) {
+			max-width: 60%;
+			margin-right: 25px;
+		}
+
+		@media (max-width: $tablet) {
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
 	}
 
 	&__content {
 		width: 100%;
 		max-width: 576px;
 		background: #fff;
+
+		@media (max-width: $laptop) {
+			max-width: 430px;
+		}
+
+		@media (max-width: $tablet) {
+			max-width: 100%;
+		}
 	}
 
 	&__story {
@@ -92,6 +110,18 @@
 		div {
 			width: 100%;
 			padding-right: 38px;
+
+			@media (max-width: $laptop) {
+				padding-right: 30px;
+			}
+
+			@media (max-width: $phone-xl) {
+				padding-right: 20px;
+			}
+
+			&:last-of-type {
+				padding-right: 0;
+			}
 		}
 
 		p {
@@ -106,12 +136,25 @@
 		justify-content: center;
 		margin-right: 50px;
 
+
+		@media (max-width: $note) {
+			align-items: flex-start;
+		}
+
 		li {
 			display: flex;
 			align-items: center;
 			margin-bottom: -10px;
 			color: $grey-dark;
 			font-size: rem(28);
+
+			@media (max-width: $laptop) {
+				font-size: rem(22);
+			}
+
+			@media (max-width: $note) {
+				margin-bottom: 0;
+			}
 		}
 
 		span {
@@ -120,8 +163,15 @@
 			font-size: rem(77);
 			font-weight: 900;
 			line-height: 1;
+
+			@media (max-width: $laptop) {
+				padding-right: 20px;
+				font-size: rem(66);
+			}
+
+			@media (max-width: $note) {
+				min-width: 120px;
+			}
 		}
 	}
-
-
 }

@@ -10,7 +10,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     fade: true,
     infinite: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3500,
     autoplay: true,
     infinite: true,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',

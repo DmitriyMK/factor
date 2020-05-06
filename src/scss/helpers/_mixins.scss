@@ -51,6 +51,18 @@
 	font-weight: 900;
 	line-height: .7;
 	text-transform: uppercase;
+
+	@media (max-width: $laptop) {
+		font-size: rem(90);
+	}
+
+	@media (max-width: $tablet) {
+		font-size: rem(80);
+	}
+
+	@media (max-width: $phone-xl) {
+		font-size: rem(44);
+	}
 }
 
 
@@ -61,4 +73,17 @@
 	line-height: 0;
 	pointer-events: none;
 	user-select: none;
+
+
+	@media (max-width: $laptop) {
+		font-size: rem(150);
+	}
+
+	@media (max-width: $tablet) {
+		font-size: rem(130);
+	}
+
+	@media (max-width: $phone-xl) {
+		font-size: rem(100);
+	}
 }

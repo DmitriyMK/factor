@@ -2,27 +2,6 @@
 
 @import "../helpers/_mixins";
 
-@include respond-to(phone) {
-}
-
-@include respond-to(phone-xl) {
-}
-
-@include respond-to(note) {
-}
-
-@include respond-to(tablet) {
-}
-
-@include respond-to(laptop) {
-}
-
-@include respond-to(desktop) {
-}
-
-@include respond-to(desktop-xl) {
-}
-
 
 .shop {
 	position: relative;
@@ -39,6 +18,11 @@
 		width: 330px;
 		height: 100%;
 		background: repeating-linear-gradient(90deg, #fafafa, #fafafa 100px, #9ca7ae 102px, #fafafa 100px, #9ca7ae 102px, #fafafa 100px, #9ca7ae 102px);
+
+		@media (max-width: $tablet) {
+			top: inherit;
+			bottom: 0;
+		}
 	}
 
 	&__line {
@@ -57,6 +41,12 @@
 		color: $grey-dark !important;
 
 		@include section-title;
+
+
+		@media (max-width: $tablet) {
+			margin-left: inherit;
+			text-align: center;
+		}
 	}
 
 	&__backTitle {
@@ -68,7 +58,10 @@
 	}
 
 	&__box {
-
+		@media (max-width: $tablet) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	&__list {
@@ -79,6 +72,11 @@
 		padding: 30px 0 30px 50px;
 		background: #f8f8f8;
 
+		@media (max-width: $tablet) {
+			margin-left: 0;
+			padding-left: 30px;
+		}
+
 		&:before {
 			content: "";
 			position: absolute;
@@ -87,6 +85,10 @@
 			width: 2px;
 			height: calc(100% + 50px);
 			background: $grey;
+
+			@media (max-width: $note) {
+				display: none;
+			}
 		}
 	}
 
@@ -144,6 +146,21 @@
 		left: 0;
 		width: 60vw;
 		height: 800px;
+
+		@media (max-width: $laptop) {
+			height: 700px;
+		}
+
+		@media (max-width: $tablet) {
+			position: relative;
+			z-index: 10;
+			width: 100%;
+			height: 600px;
+		}
+
+		@media (max-width: $note) {
+			height: 400px;
+		}
 	}
 
 }

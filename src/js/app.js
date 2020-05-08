@@ -1,4 +1,4 @@
-if (document.documentElement.clientWidth > 1200) {
+if (document.documentElement.clientWidth > 1024) {
   $(document).ready(function() {
     $(window).scroll(function() {
       var scrollTop = $(window).scrollTop();

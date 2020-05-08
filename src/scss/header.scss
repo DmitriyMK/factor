@@ -30,7 +30,7 @@
 	}
 
 	body.header-fixed & {
-		background: rgba(#f8f8f8, .75);
+		background: rgba(#f8f8f8, .8);
 	}
 
 	&__box {
@@ -54,7 +54,7 @@
 		}
 
 		body.header-fixed & {
-			padding: 10px;
+			padding: 0 10px;
 		}
 	}
 
@@ -80,7 +80,7 @@
 		.header-fixed & {
 
 			img {
-				transform: scale(.9);
+				transform: scale(.8);
 			}
 		}
 	}
@@ -252,13 +252,12 @@
 	overflow: hidden;
 	background: #fff;
 
-	@media (max-width: $note) {
+	@media (max-width: $tablet) {
 		margin-bottom: 100px;
 	}
 
 	@media (max-width: $tablet) {
 		margin-top: 0;
-		margin-bottom: 100px;
 	}
 
 	&:before {
@@ -315,7 +314,7 @@
 
 		@media (max-width: $phone-xl) {
 			max-width: 100%;
-			padding: 40px 15px 0 15px;
+			padding: 30px 15px 0 15px;
 		}
 	}
 
@@ -390,21 +389,17 @@
 		}
 
 		@media (max-width: $laptop) {
-			font-size: rem(32);
-		}
-
-		@media (max-width: $tablet) {
 			font-size: rem(30);
 		}
 
 		@media (max-width: $note) {
+			padding-bottom: 20px;
 			font-size: rem(26);
 		}
 
 		@media (max-width: $phone-xl) {
 			font-size: rem(24);
 		}
-
 	}
 
 	&__btn {

@@ -73,6 +73,7 @@
 		width: 100%;
 		max-width: 50%;
 		margin-right: 15px;
+		overflow: hidden;
 
 		@media (max-width: $laptop) {
 			max-width: 60%;

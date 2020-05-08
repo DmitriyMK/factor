@@ -1,38 +1,37 @@
-window.onload = function() {
+// window.onload = function() {
 
-  let timeline = new TimelineMax();
+//   let timeline = new TimelineMax();
 
-  timeline
-    .fromTo('.hero__title', 0.6,
-      {
-        opacity: 0,
-        visibility: 'hidden',
-        x: '-400px',
-      },
-      {
-        opacity: 1,
-        x: '0',
-        visibility: 'visible',
-        ease: Power2.easeOut
-      },
-      0.1
-    )
-    .fromTo('.hero__subtitle', 0.7,
-      {
-        visibility: 'hidden',
-        opacity: 0,
-        x: '-400px',
-      },
-      {
-        visibility: 'visible',
-        opacity: 1,
-        x: '0px',
-        ease: Power2.easeOut
-      },
-      0.3
-    );
-};
-
+//   timeline
+//     .fromTo('.hero__title', 0.6,
+//       {
+//         opacity: 0,
+//         visibility: 'hidden',
+//         x: '-400px',
+//       },
+//       {
+//         opacity: 1,
+//         x: '0',
+//         visibility: 'visible',
+//         ease: Power2.easeOut
+//       },
+//       0.1
+//     )
+//     .fromTo('.hero__subtitle', 0.7,
+//       {
+//         visibility: 'hidden',
+//         opacity: 0,
+//         x: '-400px',
+//       },
+//       {
+//         visibility: 'visible',
+//         opacity: 1,
+//         x: '0px',
+//         ease: Power2.easeOut
+//       },
+//       0.3
+//     );
+// };
 
 
 // Scrollmagic
@@ -41,12 +40,29 @@ let controller = new ScrollMagic.Controller();
 $('section').each(function() {
   let titles = $(this).find('.section__title');
   let subtitles = $(this).find('.section__backTitle');
-  let story = $(this).find('.about__story p');
-  let advantages = $(this).find('.advantages__item');
+  let story1 = $(this).find('.story1');
+  let story2 = $(this).find('.story2');
+  let story3 = $(this).find('.story3');
+  let story4 = $(this).find('.story4');
+  let story5 = $(this).find('.story5');
+  let story6 = $(this).find('.story6');
+  let story7 = $(this).find('.story7');
+  let item1= $(this).find('.item1');
+  let item2= $(this).find('.item2');
+  let item3= $(this).find('.item3');
+  let item4= $(this).find('.item4');
+  let col1= $(this).find('.col1');
+  let col2= $(this).find('.col2');
+  let col3= $(this).find('.col3');
+  let col4= $(this).find('.col4');
+
+  let photo = $(this).find('.about__photo img');
 
   let tl1 = new TimelineMax({
     pause: true
   });
+
+  let tl2 = new TimelineMax();
 
 
   tl1.add('start')
@@ -75,50 +91,198 @@ $('section').each(function() {
 
 
   tl1.add('story')
-    .fromTo(story, 0.45,
-      {
-        y: '40px',
-        opacity: 0,
-        scale: 1.05
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        ease: Elastic.easeOut.slow
-      },
-      'start'
+    .fromTo(story1, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1
+    )
+    .fromTo(story7, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.2
+    )
+    .fromTo(story2, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.4
+    )
+    .fromTo(story3, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.4
+    )
+    .fromTo(story4, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.7
+    )
+    .fromTo(story5, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    2
+    )
+    .fromTo(story6, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    2.2
+    )
+    .fromTo(item1, 1.2,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.2
+    )
+    .fromTo(item2, 1.4,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.6
+    )
+    .fromTo(item3, 1.4,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.6
+    )
+    .fromTo(item4, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.7
+    )
+    .fromTo(col1, 1.2,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.2
+    )
+    .fromTo(col2, 1.4,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.6
+    )
+    .fromTo(col3, 1.4,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.6
+    )
+    .fromTo(col4, 1,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    1.7
     );
 
-
-  tl1.add('advantages')
-    .fromTo(advantages, 0.45,
-      {
-        y: '40px',
-        opacity: 0,
-        scale: 1.05
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        ease: Elastic.easeOut.slow
-      },
-      'start'
-    );
-
+  tl2.to(photo, 1, {
+    scaleX: 1.2,
+    scaleY: 1.2,
+    transformOrigin: '50% 50%',
+    ease: Elastic.easeOut.slow
+  });
 
   let scene = new ScrollMagic.Scene({
     triggerElement: this,
-    triggerHook: 0.6,
+    triggerHook: 0.7,
     reverse: true
   })
     .setTween(tl1)
-    .addIndicators()
+    // .addIndicators()
+    .addTo(controller);
+
+  let scene2 = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    duration: '1000'
+  })
+    .setTween(tl2)
     .addTo(controller);
 });
 
-
+gsap.config({nullTargetWarn: false});
 
 
 if (document.documentElement.clientWidth > 1024) {

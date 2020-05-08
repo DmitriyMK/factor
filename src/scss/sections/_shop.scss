@@ -208,6 +208,10 @@
 	border-radius: 50%;
 	background-color: $grey;
 
+	@media (max-width: $phone-xl) {
+		top: 6px;
+	}
+
 	&:after,
 	&:before {
 		content: "";

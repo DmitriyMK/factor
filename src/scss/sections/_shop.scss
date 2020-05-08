@@ -161,6 +161,13 @@
 		width: 60vw;
 		height: 800px;
 
+		// @supports (-ms-ime-align: auto) {
+
+		// 	div[title="Фактор"]  img {
+		// 		width: 102px !important;
+		// 		height: 150px !important;
+		// 	}
+		// }
 
 		@media (max-width: $tablet) {
 			position: relative;

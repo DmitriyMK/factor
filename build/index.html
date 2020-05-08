@@ -36,7 +36,7 @@
           <div class="wrapper box">
             <div class="header__box">
               <div class="header__logo">
-                <img src="../../img/logo.png" alt="Фактор. Строительные и отделочные материалы">
+                <img src="../../img/logo.svg" alt="Фактор. Строительные и отделочные материалы">
               </div>
               <nav class="header__nav nav">
                 <ul class="nav__list">
@@ -81,7 +81,7 @@
             </div>
           </div>
         </header>
-        <main class="main">
+        <main class="main" id="hero">
           <section class="hero">
             <div class="wrapper">
               <div class="hero__box">
@@ -118,7 +118,6 @@
                   <div class="hero__slider">
                     <!-- Slide1 -->
                     <div class="slide">
-                      <!-- <div class="slide__box"> -->
                       <div class="slide__img">
                         <picture>
                           <source type="image/webp" srcset="./img/banner1.webp">
@@ -126,19 +125,9 @@
                           <img src="./img/banner1.jpg" alt>
                         </picture>
                       </div>
-                      <!-- <div class="slide__content pt1">
-                          <h3 class="slide__title">
-                            Мы работаем
-                          </h3>
-                          <p class="slide__text">
-                            Заказывай по телефону <br> с доставкой на дом.
-                          </p>
-                        </div> -->
-                      <!-- </div> -->
                     </div>
                     <!-- banner2 -->
                     <div class="slide">
-                      <!-- <div class="slide__box"> -->
                       <div class="slide__img">
                         <picture>
                           <source type="image/webp" srcset="./img/banner2.webp">
@@ -146,20 +135,9 @@
                           <img src="./img/banner2.jpg" alt>
                         </picture>
                       </div>
-                      <!-- <div class="slide__content  pt2">
-                          <h3 class="slide__title">
-                            Безопасная доставка курьером
-                            <p>20<span>грн</span></p>
-                          </h3>
-                          <p class="slide__text">
-                            По Волновахе, товар весом до 5кг.
-                          </p>
-                        </div> -->
-                      <!-- </div> -->
                     </div>
                     <!-- banner3 -->
                     <div class="slide">
-                      <!-- <div class="slide__box"> -->
                       <div class="slide__img">
                         <picture>
                           <source type="image/webp" srcset="./img/banner3.webp">
@@ -167,19 +145,9 @@
                           <img src="./img/banner3.jpg" alt>
                         </picture>
                       </div>
-                      <!-- <div class="slide__content  pt3">
-                          <h3 class="slide__title">
-                            Аренда спецтехники
-                          </h3>
-                          <p class="slide__text">
-                            Автокран, автовышка, манимулятор
-                          </p>
-                        </div> -->
-                      <!-- </div> -->
                     </div>
                     <!-- banner4 -->
                     <div class="slide">
-                      <!-- <div class="slide__box"> -->
                       <div class="slide__img">
                         <picture>
                           <source type="image/webp" srcset="./img/banner4.webp">
@@ -187,19 +155,9 @@
                           <img src="./img/banner4.jpg" alt>
                         </picture>
                       </div>
-                      <!-- <div class="slide__content  pt4">
-                          <h3 class="slide__title">
-                            Окна, кровля, <br> фасад
-                          </h3>
-                          <p class="slide__text">
-                            Бесплатный замер, установка, доставка
-                          </p>
-                        </div> -->
-                      <!-- </div> -->
                     </div>
                     <!-- banner6 -->
                     <div class="slide">
-                      <!-- <div class="slide__box"> -->
                       <div class="slide__img">
                         <picture>
                           <source type="image/webp" srcset="./img/banner5.webp">
@@ -207,16 +165,6 @@
                           <img src="./img/banner5.jpg" alt>
                         </picture>
                       </div>
-                      <!-- <div class="slide__content  pt5">
-                          <h3 class="slide__title">
-                            Безопасная доставка <br> по району
-                            <p>50<span>грн</span></p>
-                          </h3>
-                          <p class="slide__text">
-                            Кроме стеновых и кровельных материалов
-                          </p>
-                        </div> -->
-                      <!-- </div> -->
                     </div>
                   </div>
                 </div>
@@ -252,13 +200,29 @@
                     </div>
                     <ul class="about__fact">
                       <li>
-                        <span>20</span> лет на рынке </li>
+                        <div>
+                          <span class="num">20</span>
+                          <span class="text">лет на рынке</span>
+                        </div>
+                      </li>
                       <li>
-                        <span>70</span> специалистов в штате </li>
+                        <div>
+                          <span class="num">70</span>
+                          <span class="text">специалистов в штате</span>
+                        </div>
+                      </li>
                       <li>
-                        <span>9</span> магазинов </li>
+                        <div>
+                          <span class="num">9</span>
+                          <span class="text">магазинов</span>
+                        </div>
+                      </li>
                       <li>
-                        <span>50+</span> реализованных проектов </li>
+                        <div>
+                          <span class="num">50+</span>
+                          <span class="text">реализованных проектов</span>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -359,7 +323,7 @@
                       </div>
                       <div>
                         <h3> мы кредитуем </h3>
-                        <p> Приходите к нам в магазин или закажите товар дистанционно и мы оперативно доставим его на ваш объект. </p>
+                        <p> В случае необходимости, вы можете взять товар в кредит или с отсрочкой платежа. </p>
                       </div>
                     </div>
                   </li>
@@ -367,7 +331,7 @@
               </div>
             </div>
           </section>
-          <section class="client-wrap" id="client">
+          <section class="client-wrap">
             <div class="wrapper box">
               <h2 class="client__title section__title">Наши клиенты</h2>
               <p class="client__backTitle section__backTitle">Наши клиенты</p>
@@ -403,7 +367,7 @@
               </div>
             </div>
           </section>
-          <section class="client-wrap" id="partner">
+          <section class="client-wrap">
             <div class="wrapper box">
               <h2 class="client__title section__title">Наши партнеры</h2>
               <p class="client__backTitle section__backTitle">Наши партнеры</p>
@@ -461,7 +425,9 @@
                   <ul class="shop__list">
                     <li class="shop__item">
                       <div>
-                        <p>Магазин "Фактор" г. Волноваха, ул. Центральная, 68</p>
+                        <label class="label"> Магазин "Фактор" г. Волноваха, ул. Центральная, 68 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380506044730">+380 50 6044730</a>, <a class="shop__phone" href="tel:+380937298012">+380 93 7298012</a>
                         </div>
@@ -469,7 +435,9 @@
                     </li>
                     <li class="shop__item">
                       <div>
-                        <p>Магазин "Фактор" г. Волноваха, ул. Менделеева, 45</p>
+                        <label class="label"> Магазин "Фактор" г. Волноваха, ул. Менделеева, 45 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380950994121">+380 95 0994121</a>, <a class="shop__phone" href="tel:+380933570482">+380 93 3570482</a>
                         </div>
@@ -477,7 +445,9 @@
                     </li>
                     <li class="shop__item">
                       <div>
-                        <p>Магазин "Фактор" пос. Андреевка, ул. Рудченко, 25</p>
+                        <label class="label"> Магазин "Фактор" пос. Андреевка, ул. Рудченко, 25 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380687801781">+380 68 7801781</a>, <a class="shop__phone" href="tel:+380507080019">+380 50 7080019</a>
                         </div>
@@ -485,7 +455,9 @@
                     </li>
                     <li class="shop__item">
                       <div>
-                        <p>Магазин "Фактор" г. Волноваха, пер. Мостовой, 6</p>
+                        <label class="label"> Магазин "Фактор" г. Волноваха, пер. Мостовой, 6 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380667768999">+380 50 6044730</a>, <a class="shop__phone" href="tel:+380636760745">+380 63 6760745</a>
                         </div>
@@ -493,7 +465,9 @@
                     </li>
                     <li class="shop__item">
                       <div>
-                        <p>Магазин "Фактор" г. Волноваха, ул. Центральная, 66</p>
+                        <label class="label"> Магазин "Фактор" г. Волноваха, ул. Центральная, 66 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380501467319">+380 50 6044730</a>, <a class="shop__phone" href="tel:+380634005811">+380 63 4005811</a>
                         </div>
@@ -501,7 +475,9 @@
                     </li>
                     <li class="shop__item">
                       <div>
-                        <p>Салон окон "Сокос" г. Волноваха, ул. Центральная, 66</p>
+                        <label class="label"> Салон окон "Сокос" г. Волноваха, ул. Центральная, 66 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380970878222">+380 97 0878222</a>, <a class="shop__phone" href="tel:+380997116137">+380 99 7116137</a>
                         </div>
@@ -509,7 +485,9 @@
                     </li>
                     <li class="shop__item">
                       <div>
-                        <p>Центр кровли и фасада "Фактор" г. Волноваха, ул. Центральная, 66</p>
+                        <label class="label"> Центр кровли и фасада "Фактор" г. Волноваха, ул. Центральная, 66 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380997116137">+380 99 7116137</a>, <a class="shop__phone" href="tel:+380970878222">+380 97 0878222</a>
                         </div>
@@ -517,7 +495,9 @@
                     </li>
                     <li class="shop__item">
                       <div>
-                        <p>Колор-студия "Фактор" г. Волноваха, пер. Мостовой, 6</p>
+                        <label class="label"> Колор-студия "Фактор" г. Волноваха, пер. Мостовой, 6 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380501467319">+380 50 1467319</a>, <a class="shop__phone" href="tel:+380634005811">+380 63 4005811</a>
                         </div>
@@ -525,7 +505,9 @@
                     </li>
                     <li class="shop__item">
                       <div>
-                        <p>Салон дверей "Фактор" г. Волноваха, ул. Центральная, 66</p>
+                        <label class="label"> Салон дверей "Фактор" г. Волноваха, ул. Центральная, 66 <input type="radio" name="shop">
+                          <span class="checkmark"></span>
+                        </label>
                         <div>
                           <a class="shop__phone" href="tel:+380506044730">+380 50 6044730</a>, <a class="shop__phone" href="tel:+380937298012">+380 93 7298012</a>
                         </div>
@@ -542,7 +524,7 @@
           <div class="wrapper box">
             <div class="footer__box">
               <div class="footer__logo">
-                <img src="../../img/logo.png" alt="Фактор. Строительные и отделочные материалы">
+                <img src="../../img/logo.svg" alt="Фактор. Строительные и отделочные материалы">
                 <h2><span>Решения</span> для строительства и ремонта</h2>
               </div>
               <div class="footer__contact">
@@ -584,7 +566,7 @@
                   <div class="agency">
                     <a href="https://web.push-k.ua/ua" target="_blank">
                       <span>Разработка сайтов</span>
-                      <img src="../../img/pushK.png" alt>
+                      <img src="../../img/push-k.svg" alt>
                     </a>
                   </div>
                 </div>
@@ -602,22 +584,19 @@
     <script src="./js/lib/jquery-2.2.4.min.js"></script>
     <script src="./js/lib/slick.js"></script>
     <script src="./js/app.js"></script>
-    <script src="./js/lib/luxy.js"></script>
+    <!-- <script src="./js/lib/luxy.js"></script> -->
     <script src="./js/lib/map.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE">
     </script>
-    <script>
+    <!-- <script>
       var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if (!isMobile)
-      {
-        luxy.init(
-        {
+      if (!isMobile){
+        luxy.init({
           wrapper: '#luxy',
           wrapperSpeed: 0.1
         });
       }
-
-    </script>
+    </script> -->
     <script src="./js/lib/ofi.min.js"></script>
   </body>
 </html>

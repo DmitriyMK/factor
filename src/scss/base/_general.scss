@@ -47,3 +47,11 @@ body {
 	background-color: #6b6c70;
 	color: #fff;
 }
+
+[id]::before {
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 97.14px;
+	margin-top: -97.14px;
+}

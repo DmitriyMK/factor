@@ -1,3 +1,18 @@
+if (document.documentElement.clientWidth > 1200) {
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop > 49) {
+        $('body').addClass('header-fixed');
+      } else {
+        $('body').removeClass('header-fixed');
+      }
+    });
+  });
+};
+
+
+
 $(document).ready(function() {
 
   $('.hero__slider').slick({
@@ -12,26 +27,11 @@ $(document).ready(function() {
     autoplay: true,
     infinite: true,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-    // touchThreshold: 100
+    touchThreshold: 100
   });
 
   $('.client__slider').slick({
-    speed: 6000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    centerMode: true,
-    cssEase: 'linear',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true,
-    infinite: true,
-    initialSlide: 1,
-    arrows: false,
-    buttons: false
-  });
-
-  $('.partner__slider').slick({
-    speed: 6000,
+    speed: 1500,
     autoplay: true,
     autoplaySpeed: 0,
     centerMode: true,
@@ -43,7 +43,40 @@ $(document).ready(function() {
     initialSlide: 1,
     arrows: false,
     buttons: false,
-    rtl: true
+    responsive: [
+
+      {
+        breakpoint: 1024,
+        settings: {
+          speed: 3000,
+        }
+      },
+    ]
+  });
+
+  $('.partner__slider').slick({
+    speed: 1500,
+    autoplay: true,
+    autoplaySpeed: 0,
+    centerMode: true,
+    cssEase: 'linear',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+    infinite: true,
+    initialSlide: 1,
+    arrows: false,
+    buttons: false,
+    rtl: true,
+    responsive: [
+
+      {
+        breakpoint: 1024,
+        settings: {
+          speed: 3000,
+        }
+      },
+    ]
   });
 
 

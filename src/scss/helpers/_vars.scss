@@ -14,6 +14,10 @@ $laptop: 1366px;
 $desktop: 1680px;
 $desktop-xl: 1920px;
 
+$transition-standart: .3s linear;
+$transition-fast: .15s ease-out;
+$transition-cubic: .3s cubic-bezier(0,1.56,.5,1.62);
+
 @mixin respond-to($media) {
 	@if $media == phone {
 		@media (max-width: $phone) {

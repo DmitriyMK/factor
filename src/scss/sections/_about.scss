@@ -71,8 +71,8 @@
 
 	&__photo {
 		width: 100%;
-		max-width: 52%;
-		margin-right: 30px;
+		max-width: 50%;
+		margin-right: 15px;
 
 		@media (max-width: $laptop) {
 			max-width: 60%;
@@ -107,16 +107,16 @@
 		font-size: rem(18);
 		line-height: 1.25;
 
+		@media (max-width: $phone-xl) {
+			flex-direction: column;
+		}
+
 		div {
 			width: 100%;
-			padding-right: 38px;
-
-			@media (max-width: $laptop) {
-				padding-right: 30px;
-			}
+			padding-right: 30px;
 
 			@media (max-width: $phone-xl) {
-				padding-right: 20px;
+				padding-right: 0px;
 			}
 
 			&:last-of-type {
@@ -138,10 +138,11 @@
 
 
 		@media (max-width: $note) {
-			align-items: flex-start;
+			display: block;
+			margin-right: 0;
 		}
 
-		li {
+		li div {
 			display: flex;
 			align-items: center;
 			margin-bottom: -10px;
@@ -153,11 +154,12 @@
 			}
 
 			@media (max-width: $note) {
+				justify-content: flex-end;
 				margin-bottom: 0;
 			}
 		}
 
-		span {
+		span.num {
 			padding-right: 25px;
 			color: $grey;
 			font-size: rem(77);
@@ -170,7 +172,17 @@
 			}
 
 			@media (max-width: $note) {
+				order: 2;
 				min-width: 120px;
+				padding-right: 0;
+				padding-left: 20px;
+			}
+		}
+
+		span.text {
+			@media (max-width: $note) {
+				order: 1;
+				text-align: right;
 			}
 		}
 	}

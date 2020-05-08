@@ -1,14 +1,6 @@
 @import "./helpers/_vars";
 
-html {
-	height: 100%;
-}
-
 .mainwrap {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	min-height: 100%;
 	overflow: hidden;
 }
 
@@ -45,12 +37,4 @@ html {
 	@media (max-width: $laptop) {
 		max-width: 100%;
 	}
-}
-
-.main {
-	flex: 1 1 auto;
-}
-
-.footer {
-	flex: 0 0 auto;
 }

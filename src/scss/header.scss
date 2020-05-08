@@ -11,26 +11,34 @@
 
 @import "./base/_layout";
 
-// COMPONENTS
-// @import "./components/_burger";
-// @import "./components/_menuMobile";
-// @import "./components/_scrollUp";
-
 // PLUGINS
 @import "./plugins/_slick";
 
 @import "./plugins/_slick-customize";
 
-// Generated SVG Sprite
-@import "./generated/sprite-svg";
 
 .header {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	width: 100%;
+	transition: all $transition-cubic;
+	background: #f8f8f8;
+
+	@media (max-width: $tablet) {
+		position: relative;
+	}
+
+	body.header-fixed & {
+		background: rgba(#f8f8f8, .75);
+	}
 
 	&__box {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 34px 10px;
+		transition: padding $transition-cubic;
 
 		@media (max-width: $desktop) {
 			padding: 25px 30px;
@@ -42,7 +50,11 @@
 
 		@media (max-width: $note) {
 			flex-wrap: wrap;
-			padding: 15px 5px;
+			padding: 5px;
+		}
+
+		body.header-fixed & {
+			padding: 10px;
 		}
 	}
 
@@ -51,13 +63,25 @@
 			flex: 1 1 auto;
 
 			img {
-				max-width: 140px;
+				width: 140px;
 			}
 		}
 
 		@media (max-width: $note) {
 			order: 1;
 			width: calc(100% - 90px);
+		}
+
+		img {
+			width: 180px;
+			transition: transform $transition-cubic;
+		}
+
+		.header-fixed & {
+
+			img {
+				transform: scale(.9);
+			}
 		}
 	}
 
@@ -71,7 +95,6 @@
 
 		@media (max-width: $note) {
 			order: 4;
-			margin-top: 20px;
 			font-size: 17px;
 		}
 
@@ -187,7 +210,6 @@
 		border-left: 1px solid #9aa6ad;
 
 		@media (max-width: $phone-xl) {
-			margin-top: 14px;
 			margin-left: 12px;
 			padding: 0;
 			border: 0;
@@ -196,12 +218,23 @@
 		&:nth-of-type(2) {
 			border: 0;
 		}
+
+		&:hover {
+
+			.smm__link {
+				display: block;
+				transform: scale(1.05);
+			}
+		}
 	}
 
 	&__link {
 		display: block;
 		width: 30px;
 		height: 30px;
+		transition: transform $transition-fast;
+		-webkit-font-smoothing: antialiased;
+
 
 		svg {
 			display: block;
@@ -214,18 +247,18 @@
 .hero {
 	position: relative;
 	width: 100%;
-	margin-bottom: 100px;
+	margin-top: 130px;
+	margin-bottom: 190px;
 	overflow: hidden;
 	background: #fff;
 
+	@media (max-width: $note) {
+		margin-bottom: 100px;
+	}
 
 	@media (max-width: $tablet) {
-	}
-
-	@media (max-width: $note) {
-	}
-
-	@media (max-width: $phone-xl) {
+		margin-top: 0;
+		margin-bottom: 100px;
 	}
 
 	&:before {
@@ -260,25 +293,29 @@
 		position: relative;
 		z-index: 10;
 		max-width: 20.5%;
+		margin-left: 17%;
 		padding-top: 74px;
 		padding-bottom: 60px;
 
 		@media (max-width: $desktop) {
 			max-width: 27.5%;
+			margin-left: 10%;
 		}
 
 		@media (max-width: $laptop) {
-			max-width: 25%;
+			max-width: 20%;
+			margin-left: 10%;
 			padding: 70px 15px 40px;
 		}
 
 		@media (max-width: $tablet) {
 			max-width: calc(100vw - 105px);
+			margin-left: 0;
 		}
 
 		@media (max-width: $phone-xl) {
 			max-width: 100%;
-			padding-bottom: 0px;
+			padding: 40px 15px 0 15px;
 		}
 	}
 
@@ -388,31 +425,38 @@
 
 	.messengers {
 		display: flex;
+		position: fixed;
+		z-index: 999;
+		top: 25vh;
+		left: 30px;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
-		max-width: 17%;
-		margin-left: 30px;
+		width: 90px;
+		overflow: hidden;
+		// max-width: 17%;
 
-		@media (max-width: $desktop) {
-			max-width: 10%;
-			margin-left: 20px;
-		}
+		// @media (max-width: $desktop) {
+		// 	max-width: 10%;
+		// 	margin-left: 20px;
+		// }
 
 		@media (max-width: $laptop) {
-			margin-left: 0;
+			left: 15px;
+			margin-left: 0
 		}
 
 		@media (max-width: $tablet) {
 			position: absolute;
 			top: 90px;
 			right: 0;
+			left: inherit;
 			max-width: 90px;
 			margin: auto;
 		}
 
 		@media (max-width: $phone-xl) {
+			top: 80px;
 			right: -10px;
 			max-width: 50px;
 		}
@@ -421,6 +465,7 @@
 			display: block;
 			width: 90px;
 			padding: 15px 0;
+
 			border-top: 2px solid #9ca7ae;
 
 			@media (max-width: $laptop) {
@@ -441,6 +486,13 @@
 					border: 0;
 				}
 			}
+
+			&:hover {
+
+				.messengers__link {
+					transform: scale(1.1);
+				}
+			}
 		}
 
 		&__link {
@@ -448,6 +500,7 @@
 			width: 50px;
 			height: 50px;
 			margin: auto;
+			transition: transform $transition-standart;
 
 			@media (max-width: $phone-xl) {
 				width: 40px;
@@ -469,7 +522,7 @@
 		height: 100%;
 
 		@media (max-width: $laptop) {
-			max-width: 75%;
+			max-width: 65%;
 		}
 
 		@media (max-width: $tablet) {

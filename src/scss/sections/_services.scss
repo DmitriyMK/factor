@@ -2,27 +2,6 @@
 
 @import "../helpers/_mixins";
 
-@include respond-to(phone) {
-}
-
-@include respond-to(phone-xl) {
-}
-
-@include respond-to(note) {
-}
-
-@include respond-to(tablet) {
-}
-
-@include respond-to(laptop) {
-}
-
-@include respond-to(desktop) {
-}
-
-@include respond-to(desktop-xl) {
-}
-
 
 .services {
 	position: relative;
@@ -74,9 +53,9 @@
 			width: 50%;
 			margin-bottom: 20px;
 
-			&:nth-of-type(2) {
-				order: 4;
-			}
+			// &:nth-of-type(2) {
+			// 	order: 4;
+			// }
 		}
 
 		li {

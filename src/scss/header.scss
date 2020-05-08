@@ -17,6 +17,7 @@
 @import "./plugins/_slick-customize";
 
 
+
 .header {
 	position: fixed;
 	z-index: 9999;
@@ -323,6 +324,7 @@
 		width: 640px;
 		margin-right: 0px;
 		padding-bottom: 26px;
+		opacity: 0;
 		color: $grey-dark;
 		font-size: rem(90);
 		font-weight: 900;
@@ -379,6 +381,7 @@
 
 	&__subtitle {
 		padding-bottom: 40px;
+		opacity: 0;
 		color: $grey-dark;
 		font-size: rem(44);
 		font-weight: 400;
@@ -393,7 +396,7 @@
 		}
 
 		@media (max-width: $note) {
-			padding-bottom: 20px;
+			padding-bottom: 30px;
 			font-size: rem(26);
 		}
 

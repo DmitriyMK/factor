@@ -139,6 +139,11 @@
 			font-weight: 700;
 		}
 	}
+
+	.icon_svg {
+		width: 29px;
+		height: 33px;
+	}
 }
 
 .nav {
@@ -405,7 +410,7 @@
 
 	&__btn {
 		display: block;
-		animation: arrow-bounce 5s infinite;
+		// animation: arrow-bounce 5s infinite;
 		border: 0;
 		outline: none;
 		background: transparent;
@@ -414,9 +419,23 @@
 			display: none;
 		}
 
-		&:hover {
-			animation-play-state: paused;
+		.img-wrap {
+			// display: block;
+			// width: 30px;
+			// height: 29px;
+			// margin: auto;
+			// cursor: pointer;
+
+			.icon_svg {
+				width: 60px;
+				height: 60px;
+				margin-left: -13px;
+			}
 		}
+
+		// &:hover {
+		// 	animation-play-state: paused;
+		// }
 	}
 
 	.messengers {
@@ -439,7 +458,7 @@
 
 		@media (max-width: $laptop) {
 			left: 15px;
-			margin-left: 0
+			margin-left: 0;
 		}
 
 		@media (max-width: $tablet) {

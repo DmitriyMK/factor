@@ -48,7 +48,7 @@ body {
 	color: #fff;
 }
 
-[id]::before {
+section[id]::before {
 	content: "";
 	display: block;
 	visibility: hidden;

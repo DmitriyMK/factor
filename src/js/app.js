@@ -388,3 +388,69 @@ $(document).ready(function() {
 // .to('.hero__title',1,{x:'0%',ease: Linear.easeNone})
 // .to('.hero__title span',0.6,{x:'0%',ease: Linear.easeNone})
 
+
+
+let animation1 = bodymovin.loadAnimation(
+  {
+    container: document.getElementById('lottie1'),
+    path: './img/icon/icon_1.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true
+  }
+);
+
+let animation2 = bodymovin.loadAnimation(
+  {
+    container: document.getElementById('lottie2'),
+    path: './img/icon/icon_2.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true
+  },
+);
+
+let animation3 = bodymovin.loadAnimation(
+  {
+    container: document.getElementById('lottie3'),
+    path: './img/icon/icon_3.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true
+  },
+);
+
+let animation4 = bodymovin.loadAnimation(
+  {
+    container: document.getElementById('lottie4'),
+    path: './img/icon/icon_4.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true
+  }
+);
+
+let animation5 = bodymovin.loadAnimation(
+  {
+    container: document.getElementById('lottie5'),
+    path: './img/icon/icon_5.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true
+  }
+);
+
+let animation6 = bodymovin.loadAnimation(
+  {
+    container: document.getElementById('lottie6'),
+    path: './img/icon/icon_6.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true
+  }
+);
+
+// animation.addEventListener('DOMLoaded', (e) => {
+//   animation.play();
+// });
+

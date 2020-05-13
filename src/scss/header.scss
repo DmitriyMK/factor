@@ -410,7 +410,7 @@
 
 	&__btn {
 		display: block;
-		// animation: arrow-bounce 5s infinite;
+		max-width: 60px;
 		border: 0;
 		outline: none;
 		background: transparent;
@@ -420,11 +420,6 @@
 		}
 
 		.img-wrap {
-			// display: block;
-			// width: 30px;
-			// height: 29px;
-			// margin: auto;
-			// cursor: pointer;
 
 			.icon_svg {
 				width: 60px;
@@ -432,10 +427,6 @@
 				margin-left: -13px;
 			}
 		}
-
-		// &:hover {
-		// 	animation-play-state: paused;
-		// }
 	}
 
 	.messengers {

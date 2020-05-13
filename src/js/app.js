@@ -1,39 +1,3 @@
-// window.onload = function() {
-
-//   let timeline = new TimelineMax();
-
-//   timeline
-//     .fromTo('.hero__title', 0.6,
-//       {
-//         opacity: 0,
-//         visibility: 'hidden',
-//         x: '-400px',
-//       },
-//       {
-//         opacity: 1,
-//         x: '0',
-//         visibility: 'visible',
-//         ease: Power2.easeOut
-//       },
-//       0.1
-//     )
-//     .fromTo('.hero__subtitle', 0.7,
-//       {
-//         visibility: 'hidden',
-//         opacity: 0,
-//         x: '-400px',
-//       },
-//       {
-//         visibility: 'visible',
-//         opacity: 1,
-//         x: '0px',
-//         ease: Power2.easeOut
-//       },
-//       0.3
-//     );
-// };
-
-
 // Scrollmagic
 let controller = new ScrollMagic.Controller();
 
@@ -168,7 +132,18 @@ $('section').each(function() {
     },
     2.2
     )
-    .fromTo(item1, 1.2,{
+    .fromTo(item1, 0.8,{
+      y: '60px',
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: Expo.easeOut,
+    },
+    0.8
+    )
+    .fromTo(item2, 1,{
       y: '60px',
       opacity: 0,
     },
@@ -179,7 +154,7 @@ $('section').each(function() {
     },
     1.2
     )
-    .fromTo(item2, 1.4,{
+    .fromTo(item3, 1.2,{
       y: '60px',
       opacity: 0,
     },
@@ -188,9 +163,9 @@ $('section').each(function() {
       opacity: 1,
       ease: Expo.easeOut,
     },
-    1.6
+    1.4
     )
-    .fromTo(item3, 1.4,{
+    .fromTo(item4, 1.2,{
       y: '60px',
       opacity: 0,
     },
@@ -199,9 +174,9 @@ $('section').each(function() {
       opacity: 1,
       ease: Expo.easeOut,
     },
-    1.6
+    1.5
     )
-    .fromTo(item4, 1,{
+    .fromTo(col1, 1,{
       y: '60px',
       opacity: 0,
     },
@@ -210,9 +185,9 @@ $('section').each(function() {
       opacity: 1,
       ease: Expo.easeOut,
     },
-    1.7
+    1
     )
-    .fromTo(col1, 1.2,{
+    .fromTo(col2, 1.2,{
       y: '60px',
       opacity: 0,
     },
@@ -221,18 +196,7 @@ $('section').each(function() {
       opacity: 1,
       ease: Expo.easeOut,
     },
-    1.2
-    )
-    .fromTo(col2, 1.4,{
-      y: '60px',
-      opacity: 0,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      ease: Expo.easeOut,
-    },
-    1.6
+    1.4
     )
     .fromTo(col3, 1.4,{
       y: '60px',
@@ -243,7 +207,7 @@ $('section').each(function() {
       opacity: 1,
       ease: Expo.easeOut,
     },
-    1.6
+    1.5
     )
     .fromTo(col4, 1,{
       y: '60px',
@@ -254,7 +218,7 @@ $('section').each(function() {
       opacity: 1,
       ease: Expo.easeOut,
     },
-    1.7
+    1.6
     );
 
   tl2.to(photo, 1, {
@@ -380,20 +344,10 @@ $(document).ready(function() {
 });
 
 
-
-// TweenLite.set('.hero__title, .hero__title span',{x:'-101%'})
-
-// var lines = new TimelineMax({repeat:5, repeatDelay:1})
-// .from('.hero__content',0.4,{x:100})
-// .to('.hero__title',1,{x:'0%',ease: Linear.easeNone})
-// .to('.hero__title span',0.6,{x:'0%',ease: Linear.easeNone})
-
-
-
 let animation1 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie1'),
-    path: './img/icon/icon_1.json',
+    path: './json/icon_1.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -403,7 +357,7 @@ let animation1 = bodymovin.loadAnimation(
 let animation2 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie2'),
-    path: './img/icon/icon_2.json',
+    path: './json/icon_2.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -413,7 +367,7 @@ let animation2 = bodymovin.loadAnimation(
 let animation3 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie3'),
-    path: './img/icon/icon_3.json',
+    path: './json/icon_3.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -423,7 +377,7 @@ let animation3 = bodymovin.loadAnimation(
 let animation4 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie4'),
-    path: './img/icon/icon_4.json',
+    path: './json/icon_4.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -433,7 +387,7 @@ let animation4 = bodymovin.loadAnimation(
 let animation5 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie5'),
-    path: './img/icon/icon_5.json',
+    path: './json/icon_5.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -443,12 +397,22 @@ let animation5 = bodymovin.loadAnimation(
 let animation6 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie6'),
-    path: './img/icon/icon_6.json',
+    path: './json/icon_6.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
   }
 );
+
+let animation7 = bodymovin.loadAnimation(
+  {
+    container: document.getElementById('lottie7'),
+    path: './json/icon_5.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: true
+  }
+);;
 
 // animation.addEventListener('DOMLoaded', (e) => {
 //   animation.play();

@@ -6,13 +6,9 @@
 
 .client {
 	position: relative;
-	margin-bottom: 230px;
+	margin-bottom: 140px;
 	overflow: hidden;
 	background: #fff;
-
-	@media (max-width: $note) {
-		margin-bottom: 150px;
-	}
 
 	&__title {
 		position: relative;

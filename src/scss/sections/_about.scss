@@ -61,7 +61,7 @@
 		position: relative;
 		z-index: 1;
 		width: 100%;
-		padding: 72px 0;
+		padding: 42px 0 72px 0;
 
 		@media (max-width: $tablet) {
 			flex-direction: column;
@@ -103,13 +103,13 @@
 
 	&__story {
 		display: flex;
-		margin-bottom: 10px;
 		color: $grey-dark;
 		font-size: rem(18);
 		line-height: 1.25;
 
 		@media (max-width: $phone-xl) {
 			flex-direction: column;
+			margin-bottom: 10px;
 		}
 
 		div {

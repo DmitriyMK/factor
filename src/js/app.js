@@ -347,7 +347,7 @@ $(document).ready(function() {
 let animation1 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie1'),
-    path: './json/icon_1.json',
+    path: 'json/icon_1.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -357,7 +357,7 @@ let animation1 = bodymovin.loadAnimation(
 let animation2 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie2'),
-    path: './json/icon_2.json',
+    path: 'json/icon_2.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -367,7 +367,7 @@ let animation2 = bodymovin.loadAnimation(
 let animation3 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie3'),
-    path: './json/icon_3.json',
+    path: 'json/icon_3.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -377,7 +377,7 @@ let animation3 = bodymovin.loadAnimation(
 let animation4 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie4'),
-    path: './json/icon_4.json',
+    path: 'json/icon_4.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -387,7 +387,7 @@ let animation4 = bodymovin.loadAnimation(
 let animation5 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie5'),
-    path: './json/icon_5.json',
+    path: 'json/icon_5.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -397,7 +397,7 @@ let animation5 = bodymovin.loadAnimation(
 let animation6 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie6'),
-    path: './json/icon_6.json',
+    path: 'json/icon_6.json',
     renderer: 'svg',
     loop: true,
     autoplay: true
@@ -407,7 +407,7 @@ let animation6 = bodymovin.loadAnimation(
 let animation7 = bodymovin.loadAnimation(
   {
     container: document.getElementById('lottie7'),
-    path: './json/icon_5.json',
+    path: 'json/icon_5.json',
     renderer: 'svg',
     loop: true,
     autoplay: true

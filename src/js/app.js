@@ -417,7 +417,3 @@ let animation7 = bodymovin.loadAnimation(
 //   animation.play();
 // });
 
-$(window).on('resize orientationchange', function() {
-  $('.client__slider').slick('resize');
-  $('.partner__slider').slick('resize');
-});

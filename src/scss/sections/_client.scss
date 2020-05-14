@@ -85,3 +85,8 @@
 		animation-play-state: paused;
 	}
 }
+
+.slick-track {
+	width: 100vw;
+	will-change: transform;
+}

@@ -246,7 +246,6 @@ $('section').each(function() {
     .addTo(controller);
 });
 
-gsap.config({nullTargetWarn: false});
 
 
 if (document.documentElement.clientWidth > 1024) {
@@ -412,9 +411,13 @@ let animation7 = bodymovin.loadAnimation(
     loop: true,
     autoplay: true
   }
-);;
+);
 
 // animation.addEventListener('DOMLoaded', (e) => {
 //   animation.play();
 // });
 
+$(window).on('resize orientationchange', function() {
+  $('.client__slider').slick('resize');
+  $('.partner__slider').slick('resize');
+});

@@ -1,4 +1,63 @@
-var markersData = [
+
+function startButtonEvents () {
+  document.getElementById('shop1').addEventListener(
+    'click', function(){
+      zoomToShop1()
+    }
+  )
+
+  document.getElementById('shop2').addEventListener(
+    'click', function(){
+      zoomToShop2()
+    }
+  )
+
+  document.getElementById('shop3').addEventListener(
+    'click', function(){
+      zoomToShop3()
+    }
+  )
+
+  document.getElementById('shop4').addEventListener(
+    'click', function(){
+      zoomToShop4()
+    }
+  )
+
+  document.getElementById('shop5').addEventListener(
+    'click', function(){
+      zoomToShop5()
+    }
+  );
+  document.getElementById('shop6').addEventListener(
+    'click', function(){
+      zoomToShop6()
+    }
+  )
+
+  document.getElementById('shop7').addEventListener(
+    'click', function(){
+      zoomToShop7()
+    }
+  )
+
+  document.getElementById('shop8').addEventListener(
+    'click', function(){
+      zoomToShop8()
+    }
+  )
+
+  document.getElementById('shop9').addEventListener(
+    'click', function(){
+      zoomToShop9()
+    }
+  );
+};
+
+
+
+
+let markersData = [
   {
     lat: 47.59448325,
     lng: 37.5007515,
@@ -25,18 +84,24 @@ var markersData = [
   },
   {
     lat: 47.59945704,
-    lng: 337.4952355,
+    lng: 37.4952355,
     name: "Фактор",
     address: " г. Волноваха,  ул. Центральная, 66"
-  }
+  },
+  {
+    lat: 47.6181695,
+    lng: 37.4904304,
+    name: "Фактор",
+    address: " г. Волноваха,  ул. Центральная, 66"
+  },
 ];
 
-var map, infoWindow;
+let map, infoWindow;
 
 function initMap() {
-  var centerLatLng = new google.maps.LatLng(47.59448325, 37.5007515);
+  let centerLatLng = new google.maps.LatLng(47.59448325, 37.5007515);
 
-  var mapOptions = {
+  let mapOptions = {
     center: centerLatLng,
     zoom: 13,
 
@@ -266,13 +331,13 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  var bounds = new google.maps.LatLngBounds();
+  let bounds = new google.maps.LatLngBounds();
 
-  for (var i = 0; i < markersData.length; i++) {
+  for (let i = 0; i < markersData.length; i++) {
 
-    var latLng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
-    var name = markersData[i].name;
-    var address = markersData[i].address;
+    let latLng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
+    let name = markersData[i].name;
+    let address = markersData[i].address;
 
     addMarker(latLng, name, address);
 
@@ -280,19 +345,74 @@ function initMap() {
   }
 
   // map.fitBounds(bounds);
+  startButtonEvents();
 
 }
 
 function addMarker(latLng, name, address) {
 
-  var image = '../img/marker.svg';
+  let image = '../img/marker.svg';
 
-  var marker = new google.maps.Marker({
+  let marker = new google.maps.Marker({
     position: latLng,
     map: map,
     icon: image,
     title: name
   });
+};
 
 
+
+function zoomToShop1() {
+  let shop = new google.maps.LatLng(47.59448325, 37.5007515);
+  map.setCenter(shop);
+  map.setZoom(11);
+}
+
+function zoomToShop2() {
+  let shop = new google.maps.LatLng(47.6181695,37.4904304);
+  map.setCenter(shop);
+  map.setZoom(11);
+}
+
+function zoomToShop3() {
+  let shop = new google.maps.LatLng(47.4609289, 37.6489126);
+  map.setCenter(shop);
+  map.setZoom(11);
+}
+
+function zoomToShop4() {
+  let shop = new google.maps.LatLng(47.609115, 37.4829432);
+  map.setCenter(shop);
+  map.setZoom(11);
+}
+
+function zoomToShop5() {
+  let shop = new google.maps.LatLng(47.59945704, 37.4952355);
+  map.setCenter(shop);
+  map.setZoom(11);
+}
+
+function zoomToShop6() {
+  let shop = new google.maps.LatLng(47.59945704, 37.4952355);
+  map.setCenter(shop);
+  map.setZoom(11);
+}
+
+function zoomToShop7() {
+  let shop = new google.maps.LatLng(47.59945704, 37.4952355);
+  map.setCenter(shop);
+  map.setZoom(11);
+}
+
+function zoomToShop8() {
+  let shop = new google.maps.LatLng(47.59448325, 37.5007515);
+  map.setCenter(shop);
+  map.setZoom(11);
+}
+
+function zoomToShop9() {
+  let shop = new google.maps.LatLng(47.59945704, 37.4952355);
+  map.setCenter(shop);
+  map.setZoom(11);
 }

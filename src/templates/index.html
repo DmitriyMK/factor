@@ -75,12 +75,12 @@ ShopTitle: 'МАГАЗИНИ'
 shop1: 'Магазин "Фактор", м. Волноваха, вул. Центральна, 68'
 shop2: 'Магазин "Фактор", м. Волноваха, вул. Менделєєва, 45'
 shop3: 'Магазин "Фактор", с. Андріївка, вул. Рудченко, 25'
-shop4: 'Магазин "Фактор", м. Волноваха, пров. Мостовий, 6'
-shop5: 'Магазин "Фактор", м. Волноваха, вул. Центральна, 66'
-shop6: 'Салон вікон "Сокос", м. Волноваха, вул. Центральна, 6'
+shop4: 'Оптова база "Фактор", м. Волноваха, пров. Мостовий, 6'
+shop5: 'Декор-центр "Фактор", м. Волноваха, вул. Центральна, 66'
+shop6: 'Салон вікон "Сокос", м. Волноваха, вул. Центральна, 66'
 shop7: 'Центр покрівлі та фасаду "Фактор", м. Волноваха,'
 shop7plus: 'вул. Центральна, 66'
-shop8: 'Колор-студія "Фактор", м. Волноваха, пров. Мостовий, 6'
+shop8: 'Колор-студія "Фактор", м. Волноваха, вул. Центральна, 68'
 shop9: 'Салон дверей "Фактор", м. Волноваха, вул. Центральна, 66'
 
 footerTitle1: 'Рішення'
@@ -134,7 +134,7 @@ footerAgency: 'Розробка сайтів'
             </span>
           </h1>
 
-          <h2 class="hero__subtitle" data-scrollmagic1>
+          <h2 class="hero__subtitle">
             {{ heroSubtitle1 }} <br>
             {{ heroSubtitle2 }} <br>
             {{ heroSubtitle3 }}
@@ -163,7 +163,7 @@ footerAgency: 'Розробка сайтів'
             </div>
 
             <!-- banner2 -->
-            <div class="slide">
+            <!-- <div class="slide">
               <div class="slide__img">
                 <picture>
                   <source type="image/webp" srcset="./img/banner2_ua.webp">
@@ -171,7 +171,7 @@ footerAgency: 'Розробка сайтів'
                   <img src="./img/banner2_ua.jpg" alt>
                 </picture>
               </div>
-            </div>
+            </div> -->
 
             <!-- banner3 -->
             <div class="slide">
@@ -294,7 +294,7 @@ footerAgency: 'Розробка сайтів'
         <div class="services__box">
           <ul class="services__list col1">
             <li>{{ serviceItem1 }}</li>
-            <li>{{ serviceItem2 }}</li>
+            <!-- <li>{{ serviceItem2 }}</li> -->
             <li>{{ serviceItem3 }}</li>
             <li>{{ serviceItem4 }}</li>
             <li>{{ serviceItem5 }}</li>
@@ -321,7 +321,7 @@ footerAgency: 'Розробка сайтів'
           </ul>
 
           <ul class="services__list col4">
-            <li>{{ serviceItem19 }}</li>
+            <li>{{ serviceItem2 }}</li>
             <li>{{ serviceItem20 }}</li>
             <li>{{ serviceItem21 }}</li>
             <li>{{ serviceItem22 }}</li>
@@ -510,7 +510,7 @@ footerAgency: 'Розробка сайтів'
           <ul class="shop__list">
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop1">
                   {{ shop1 }}
                   <input type="radio" name="shop">
                   <span class="checkmark"></span>
@@ -524,7 +524,7 @@ footerAgency: 'Розробка сайтів'
 
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop2">
                   {{ shop2 }}
                   <input type="radio" name="shop">
                   <span class="checkmark"></span>
@@ -538,7 +538,7 @@ footerAgency: 'Розробка сайтів'
 
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop3">
                   {{ shop3 }}
                   <input type="radio" name="shop">
                   <span class="checkmark"></span>
@@ -552,7 +552,7 @@ footerAgency: 'Розробка сайтів'
 
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop4">
                   {{ shop4 }}
                   <input type="radio" name="shop">
                   <span class="checkmark"></span>
@@ -566,21 +566,21 @@ footerAgency: 'Розробка сайтів'
 
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop5">
                   {{ shop5 }}
                   <input type="radio" name="shop">
                   <span class="checkmark"></span>
                 </label>
                 <div>
-                  <a class="shop__phone" href="tel:+380501467319">+380 50 6044730</a>,
-                  <a class="shop__phone" href="tel:+380634005811">+380 63 4005811</a>
+                  <a class="shop__phone" href="tel:+380993866798">+380 99 3866798</a>,
+                  <a class="shop__phone" href="tel:+380931521661">+380 93 1521661</a>
                 </div>
               </div>
             </li>
 
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop6">
                   {{ shop6 }}
                   <input type="radio" name="shop">
                   <span class="checkmark"></span>
@@ -594,7 +594,7 @@ footerAgency: 'Розробка сайтів'
 
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop7">
                   {{ shop7 }}
                   <br>
                   {{ shop7plus }}
@@ -610,7 +610,7 @@ footerAgency: 'Розробка сайтів'
 
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop8">
                   {{ shop8 }}
                   <input type="radio" name="shop">
                   <span class="checkmark"></span>
@@ -624,14 +624,14 @@ footerAgency: 'Розробка сайтів'
 
             <li class="shop__item">
               <div>
-                <label class="label">
+                <label class="label" id="shop9">
                   {{ shop9 }}
                   <input type="radio" name="shop">
                   <span class="checkmark"></span>
                 </label>
                 <div>
-                  <a class="shop__phone" href="tel:+380506044730">+380 50 6044730</a>,
-                  <a class="shop__phone" href="tel:+380937298012">+380 93 7298012</a>
+                  <a class="shop__phone" href="tel:+380506042959">+380 50 6042959</a>,
+                  <a class="shop__phone" href="tel:+380933722462">+380 93 3722462</a>
                 </div>
               </div>
             </li>

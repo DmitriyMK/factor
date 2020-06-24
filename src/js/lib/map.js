@@ -57,7 +57,7 @@ function startButtonEvents () {
 
 
 
-let markersData = [
+var markersData = [
   {
     lat: 47.59448325,
     lng: 37.5007515,
@@ -96,14 +96,14 @@ let markersData = [
   },
 ];
 
-let map, infoWindow;
+var map, infoWindow;
 
 function initMap() {
-  let centerLatLng = new google.maps.LatLng(47.59448325, 37.5007515);
+  var centerLatLng = new google.maps.LatLng(47.59448325, 37.5007515);
 
-  let mapOptions = {
+  var mapOptions = {
     center: centerLatLng,
-    zoom: 13,
+    zoom: 12,
 
     mapTypeControl: false,
 
@@ -331,13 +331,13 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  let bounds = new google.maps.LatLngBounds();
+  var bounds = new google.maps.LatLngBounds();
 
-  for (let i = 0; i < markersData.length; i++) {
+  for (var i = 0; i < markersData.length; i++) {
 
-    let latLng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
-    let name = markersData[i].name;
-    let address = markersData[i].address;
+    var latLng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
+    var name = markersData[i].name;
+    var address = markersData[i].address;
 
     addMarker(latLng, name, address);
 
@@ -351,11 +351,12 @@ function initMap() {
 
 function addMarker(latLng, name, address) {
 
-  let image = '../img/marker.svg';
+  var image = '../img/marker.png';
 
-  let marker = new google.maps.Marker({
+  var marker = new google.maps.Marker({
     position: latLng,
     map: map,
+    // animation:google.maps.Animation.BOUNCE,
     icon: image,
     title: name
   });
@@ -364,55 +365,55 @@ function addMarker(latLng, name, address) {
 
 
 function zoomToShop1() {
-  let shop = new google.maps.LatLng(47.59448325, 37.5007515);
+  var shop = new google.maps.LatLng(47.59448325, 37.5007515);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }
 
 function zoomToShop2() {
-  let shop = new google.maps.LatLng(47.6181695,37.4904304);
+  var shop = new google.maps.LatLng(47.6181695,37.4904304);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }
 
 function zoomToShop3() {
-  let shop = new google.maps.LatLng(47.4609289, 37.6489126);
+  var shop = new google.maps.LatLng(47.4609289, 37.6489126);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }
 
 function zoomToShop4() {
-  let shop = new google.maps.LatLng(47.609115, 37.4829432);
+  var shop = new google.maps.LatLng(47.609115, 37.4829432);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }
 
 function zoomToShop5() {
-  let shop = new google.maps.LatLng(47.59945704, 37.4952355);
+  var shop = new google.maps.LatLng(47.59945704, 37.4952355);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }
 
 function zoomToShop6() {
-  let shop = new google.maps.LatLng(47.59945704, 37.4952355);
+  var shop = new google.maps.LatLng(47.59945704, 37.4952355);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }
 
 function zoomToShop7() {
-  let shop = new google.maps.LatLng(47.59945704, 37.4952355);
+  var shop = new google.maps.LatLng(47.59945704, 37.4952355);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }
 
 function zoomToShop8() {
-  let shop = new google.maps.LatLng(47.59448325, 37.5007515);
+  var shop = new google.maps.LatLng(47.59448325, 37.5007515);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }
 
 function zoomToShop9() {
-  let shop = new google.maps.LatLng(47.59945704, 37.4952355);
+  var shop = new google.maps.LatLng(47.59945704, 37.4952355);
   map.setCenter(shop);
-  map.setZoom(11);
+  map.setZoom(15);
 }

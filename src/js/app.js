@@ -340,6 +340,22 @@ $(document).ready(function() {
       scrollTop: top
     }, 1000);
   });
+
+
+
+  if (document.documentElement.clientWidth < 1025) {
+    $('.shop__item').on('click', function(event) {
+      event.preventDefault();
+      var id = $('#map'),
+
+        top = $(id).offset().top;
+
+      $('body,html').animate({
+        scrollTop: top
+      }, 1000);
+    });
+  }
+
 });
 
 
